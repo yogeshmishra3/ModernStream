@@ -47,7 +47,7 @@ export default function ContactForm() {
     <div className="min-h-screen bg-gradient-to-br mt-7 from-blue-50 to-blue-100 flex items-center justify-center p-6">
       <div className="w-full max-w-5xl bg-white rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-2">
         {/* Left Side - Contact Information */}
-        <div className="bg-gradient-to-br from-blue-600 to-blue-400 text-white p-12 flex flex-col justify-center">
+        <div className="bg-gradient-to-br from-blue-800 to-blue-500 text-white p-12 flex flex-col justify-center">
           <div className="max-w-md space-y-8">
             <blockquote className="text-4xl font-bold italic leading-tight mb-8 opacity-90">
               "Transform your ideas into extraordinary solutions."
