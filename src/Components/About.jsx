@@ -91,10 +91,10 @@ const About = () => {
       <div className="max-w-7xl mx-auto mt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Vision */}
-          <div className="bg-white p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
-            <h3 className="text-blue-600 text-sm font-semibold tracking-wider uppercase mb-3">
+          <div className="bg-white p-5 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+            <h1 className="text-blue-600 text-2xl font-semibold tracking-wider uppercase mb-3">
               Our Vision
-            </h3>
+            </h1>
             <h4 className="text-2xl font-bold text-gray-900 mb-4">
               Creating a digital future for all
             </h4>
@@ -109,7 +109,7 @@ const About = () => {
 
           {/* Mission */}
           <div className="bg-white p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
-            <h3 className="text-blue-600 text-sm font-semibold tracking-wider uppercase mb-3">
+            <h3 className="text-blue-600 text-2xl font-semibold tracking-wider uppercase mb-3">
               Our Mission
             </h3>
             <h4 className="text-2xl font-bold text-gray-900 mb-4">

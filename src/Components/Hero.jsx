@@ -8,9 +8,9 @@ const Hero = () => {
       const squaresArray = new Array(6).fill("").map((_, index) => ({
         id: index,
         size: Math.random() * 40 + 20,
-        left: Math.random() * 90 + "%", 
+        left: Math.random() * 90 + "%",
         top: Math.random() * 50 + "%",
-        animationDuration: Math.random() * 12 + 8 + "s", 
+        animationDuration: Math.random() * 12 + 8 + "s",
       }));
       setSquares(squaresArray);
     };
@@ -18,7 +18,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-white min-h-screen flex items-center justify-center py-12">
+    <section className="relative overflow-hidden bg-white mt-7 min-h-screen flex items-center justify-center py-12">
       {/* Animated Square Grid */}
       {squares.map((square) => (
         <div
