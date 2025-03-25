@@ -20,8 +20,8 @@ const About = () => {
             <span className="text-blue-600">innovative solutions</span>
           </h2>
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            At <span className="font-semibold text-blue-600">TechOrbit</span>,
-            we provide cutting-edge IT solutions to drive business growth. Our
+            At <span className="font-semibold text-blue-600">ModernStream</span>
+            , we provide cutting-edge IT solutions to drive business growth. Our
             expert team leverages modern technology to deliver scalable,
             reliable, and secure systems.
           </p>
@@ -83,6 +83,45 @@ const About = () => {
                 className="text-blue-600 text-xl"
               />
             </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Vision and Mission Section */}
+      <div className="max-w-7xl mx-auto mt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          {/* Vision */}
+          <div className="bg-white p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+            <h3 className="text-blue-600 text-sm font-semibold tracking-wider uppercase mb-3">
+              Our Vision
+            </h3>
+            <h4 className="text-2xl font-bold text-gray-900 mb-4">
+              Creating a digital future for all
+            </h4>
+            <p className="text-gray-700 leading-relaxed">
+              We envision a world where businesses of all sizes have access to
+              transformative technology that creates opportunities, drives
+              innovation, and fosters sustainable growth. Our aim is to be at
+              the forefront of digital transformation, setting new standards for
+              excellence in the IT industry.
+            </p>
+          </div>
+
+          {/* Mission */}
+          <div className="bg-white p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+            <h3 className="text-blue-600 text-sm font-semibold tracking-wider uppercase mb-3">
+              Our Mission
+            </h3>
+            <h4 className="text-2xl font-bold text-gray-900 mb-4">
+              Delivering excellence through innovation
+            </h4>
+            <p className="text-gray-700 leading-relaxed">
+              Our mission is to empower organizations through customized
+              technology solutions that address specific challenges and unlock
+              new possibilities. We are committed to delivering exceptional
+              value through collaborative partnerships, technical expertise, and
+              unwavering dedication to client success.
+            </p>
           </div>
         </div>
       </div>

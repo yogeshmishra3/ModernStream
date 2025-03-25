@@ -1,25 +1,65 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import Hero from "./Components/Hero";
 import About from "./Components/About";
 import Services from "./Components/Services";
-import Testimonials from "./Components/Testimonials";
 import Footer from "./Components/Footer";
 import RecentWorks from "./Components/Work";
 import ContactForm from "./Components/ContactForm";
+import { Features } from "./Components/Features";
+import { Testimonials } from "./Components/Testimonials";
+
+function MainContent() {
+  const location = useLocation();
+  const [showAll, setShowAll] = useState(true);
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setShowAll(true);
+    } else {
+      setShowAll(false);
+    }
+  }, [location.pathname]);
+
+  return (
+    <>
+      {showAll ? (
+        <>
+          <Hero />
+          <About />
+          <Features />
+          <RecentWorks />
+          <Testimonials />
+          <Services />
+          <ContactForm />
+        </>
+      ) : (
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/testimonal" element={<Testimonials />} />
+          <Route path="/works" element={<RecentWorks />} />
+          <Route path="/contact" element={<ContactForm />} />
+        </Routes>
+      )}
+    </>
+  );
+}
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Hero />
-      <About />
-      <Services />
-      <RecentWorks />
-      <Testimonials />
-      <ContactForm />
+      <MainContent />
       <Footer />
-    </>
+    </Router>
   );
 }
 

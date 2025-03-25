@@ -9,11 +9,8 @@ export default function Header() {
     {
       name: "About",
       path: "/about",
-      dropdown: [
-        { name: "Our Team", path: "/about/team" },
-        { name: "Our Story", path: "/about/story" },
-      ],
     },
+
     {
       name: "Services",
       path: "/services",
@@ -24,16 +21,32 @@ export default function Header() {
         { name: "IT Consulting", path: "/services/it-consulting" },
       ],
     },
-
+    {
+      name: "Testimonal",
+      path: "/testimonal",
+    },
     { name: "Contact", path: "/contact" },
   ];
+
+  // Function to handle the quote request
+  const handleGetQuote = () => {
+    // You can replace this with your desired functionality
+    // For example, open a modal, navigate to a contact page, etc.
+    // window.location.href = "/contact?requestQuote=true";
+
+    // Alternatively, if you want to use the WhatsApp link like in the mobile version:
+    window.open(
+      "https://wa.me/7410730220?text=I'm%20interested%20in%20getting%20a%20quote%20for%20your%20services.",
+      "_blank"
+    );
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white bg-opacity-50 backdrop-blur-md shadow-md z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <span className="ml-2 text-2xl font-bold text-black">
-            Tech<span className="text-blue-600">Orbit</span>
+            Modern<span className="text-blue-600">Stream</span>
           </span>
         </div>
 
@@ -85,7 +98,10 @@ export default function Header() {
 
         {/* Search & CTA */}
         <div className="hidden md:flex items-center space-x-4">
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-md">
+          <button
+            onClick={handleGetQuote}
+            className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-md"
+          >
             Get a Quote
           </button>
         </div>
@@ -139,12 +155,12 @@ export default function Header() {
                 </div>
               ))}
               <div className="border-t border-gray-200 mt-2 pt-2">
-                <a
-                  href="/contact"
-                  className="block mx-4 my-2 px-4 py-2 bg-blue-600 text-white text-center rounded-full hover:bg-blue-700 transition duration-300"
+                <button
+                  onClick={handleGetQuote}
+                  className="block w-full mx-4 my-2 px-4 py-2 bg-blue-600 text-white text-center rounded-full hover:bg-blue-700 transition duration-300"
                 >
                   Get a Quote
-                </a>
+                </button>
               </div>
             </div>
           )}

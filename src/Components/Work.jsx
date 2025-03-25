@@ -8,7 +8,7 @@ const works = [
   {
     id: 1,
     category: "Web",
-    title: "TechOrbit CRM",
+    title: "modernstream CRM",
     description:
       "A comprehensive customer relationship management system with advanced analytics and reporting features.",
     image: imgCRM,
