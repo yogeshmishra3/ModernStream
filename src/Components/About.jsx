@@ -8,7 +8,7 @@ import {
 
 const About = () => {
   return (
-    <section className="bg-gradient-to-r from-gray-100 to-gray-50 text-gray-900 py-24 px-8">
+    <section className="bg-gradient-to-r mt-7 from-gray-100 to-gray-50 text-gray-900 py-24 px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Left Side */}
         <div>

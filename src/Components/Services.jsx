@@ -28,7 +28,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-gradient-to-br from-[#0b0f19] via-[#151a29] to-[#1a1f2e] text-white py-24">
+    <section className="bg-gradient-to-br from-[#0b0f19] mt-7 via-[#151a29] to-[#1a1f2e] text-white py-24">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="max-w-3xl mx-auto text-center mb-16">

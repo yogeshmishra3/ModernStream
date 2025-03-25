@@ -87,7 +87,7 @@ export const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="py-24 px-6 md:px-12 relative overflow-hidden"
+      className="py-24 px-6 mt-7 md:px-12 relative overflow-hidden"
     >
       {/* Background decorations */}
       <div className="absolute top-40 -left-40 w-80 h-80 bg-indigo-50 rounded-full opacity-70 blur-3xl"></div>
