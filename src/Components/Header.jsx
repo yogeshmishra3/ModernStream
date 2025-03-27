@@ -23,7 +23,7 @@ export default function Header() {
     },
     {
       name: "Testimonial",
-      path: "/testimonial",
+      path: "/testimonal",
     },
     { name: "Contact", path: "/contact" },
   ];
