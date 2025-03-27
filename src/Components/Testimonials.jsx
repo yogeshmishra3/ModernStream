@@ -64,21 +64,21 @@ export const Testimonials = () => {
     {
       quote:
         "The attention to detail is remarkable. Every interaction feels carefully crafted, creating a user experience that's both efficient and enjoyable.",
-      author: "Alex Morgan",
+      author: "Amit Tiwari",
       role: "Product Designer",
-      company: "Designflow",
+      company: "Naitik Logistics",
     },
     {
       quote:
         "I've never seen a product that so perfectly balances aesthetic beauty with functional simplicity. It's transformed how our team works.",
-      author: "Jamie Chen",
+      author: "Vedant Ghole",
       role: "CTO",
-      company: "TechVision",
+      company: "Vedant Surface Coating Industries",
     },
     {
       quote:
         "The minimalist approach doesn't just look good—it makes our workflows faster and more intuitive. This is design with purpose.",
-      author: "Sam Taylor",
+      author: "",
       role: "Creative Director",
       company: "Artisan Studios",
     },

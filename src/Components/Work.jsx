@@ -1,4 +1,7 @@
 import { useState } from "react";
+import CRMImg from "../assets/CRM.jpg";
+import WebImgg from "../assets/Website.jpg";
+import AppImg from "../assets/App.jpg";
 
 const categories = ["All", "Web", "App", "Web Design"];
 const works = [
@@ -8,7 +11,7 @@ const works = [
     title: "modernstream CRM",
     description:
       "A comprehensive customer relationship management system with advanced analytics and reporting features.",
-    image: "/api/placeholder/400/300",
+    image: CRMImg,
   },
   {
     id: 2,
@@ -16,7 +19,7 @@ const works = [
     title: "Static Transport Website",
     description:
       "Modern, responsive website design for a transportation company featuring animated elements and intuitive navigation.",
-    image: "/api/placeholder/400/300",
+    image: WebImgg,
   },
   {
     id: 3,
@@ -24,7 +27,7 @@ const works = [
     title: "Ascetic App",
     description:
       "Minimalist productivity mobile application with focus tracking and customizable workflow management.",
-    image: "/api/placeholder/400/300",
+    image: AppImg,
   },
 ];
 
