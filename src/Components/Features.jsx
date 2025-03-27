@@ -33,23 +33,23 @@ const FeatureCard = ({ title, description, icon, delay = 0 }) => {
   return (
     <div
       ref={cardRef}
-      className="glass-card p-6 rounded-xl transition-all duration-700 ease-out opacity-0 translate-y-8"
+      className="bg-gray-800 border border-gray-700 p-6 rounded-xl transition-all duration-700 ease-out opacity-0 translate-y-8 hover:scale-105 hover:border-cyan-500 group"
     >
-      <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-5">
+      <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center text-cyan-400 mb-5 group-hover:bg-cyan-500/20 transition-colors">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-slate-600">{description}</p>
+      <h3 className="text-xl font-semibold mb-3 text-white">{title}</h3>
+      <p className="text-gray-400">{description}</p>
     </div>
   );
 };
 
-export const Features = () => {
+const Features = () => {
   const features = [
     {
-      title: "Intuitive Design",
+      title: "Custom Software Development",
       description:
-        "Carefully crafted interfaces that feel natural and effortless to use, reducing cognitive load.",
+        "Tailored solutions designed to fit your unique business needs, built with cutting-edge technologies for scalability and performance.",
       icon: (
         <svg
           className="w-6 h-6"
@@ -62,15 +62,15 @@ export const Features = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
           />
         </svg>
       ),
     },
     {
-      title: "Functional Simplicity",
+      title: "Cloud Solutions & Migration",
       description:
-        "Every element serves a purpose. No clutter, no distractions—just what you need, where you need it.",
+        "Seamless transition to cloud infrastructure with optimized architecture for security, reliability, and cost-efficiency.",
       icon: (
         <svg
           className="w-6 h-6"
@@ -83,15 +83,15 @@ export const Features = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+            d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
           />
         </svg>
       ),
     },
     {
-      title: "Flawless Animations",
+      title: "AI & Machine Learning Solutions",
       description:
-        "Smooth, purposeful transitions that guide the user through their journey without overwhelming them.",
+        "Leverage advanced AI technologies to automate processes, gain insights, and create intelligent systems that drive business innovation.",
       icon: (
         <svg
           className="w-6 h-6"
@@ -104,57 +104,15 @@ export const Features = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"
+            d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
           />
         </svg>
       ),
     },
     {
-      title: "Typographic Excellence",
+      title: "Cybersecurity Services",
       description:
-        "Carefully selected fonts and text sizing that enhances readability while maintaining visual harmony.",
-      icon: (
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-          />
-        </svg>
-      ),
-    },
-    {
-      title: "Responsive Precision",
-      description:
-        "Perfectly adapts to any screen size, ensuring a consistent experience across all devices.",
-      icon: (
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-          />
-        </svg>
-      ),
-    },
-    {
-      title: "Thoughtful Details",
-      description:
-        "Even the smallest details are considered, creating moments of delight throughout the experience.",
+        "Comprehensive security solutions to protect your digital assets, ensure compliance, and defend against evolving cyber threats.",
       icon: (
         <svg
           className="w-6 h-6"
@@ -177,24 +135,23 @@ export const Features = () => {
   return (
     <section
       id="features"
-      className="py-24 px-6 md:px-12 relative overflow-hidden"
+      className="py-24 px-6 md:px-12 relative overflow-hidden bg-gray-900"
     >
       {/* Background decorations */}
-      <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-50 rounded-full opacity-70 blur-3xl"></div>
-      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-50 rounded-full opacity-70 blur-3xl"></div>
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-900 rounded-full opacity-30 blur-3xl"></div>
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-900 rounded-full opacity-30 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="inline-block text-sm font-medium bg-blue-50 text-blue-600 rounded-full px-4 py-1.5 mb-4">
-            Features
+          <h2 className="inline-block text-sm font-medium bg-gray-800 text-cyan-400 rounded-full px-4 py-1.5 mb-4">
+            Our Expertise
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
-            Designed with purpose, crafted with precision
+          <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            Innovative Technology Solutions for Digital Transformation
           </h3>
-          <p className="text-slate-600 max-w-3xl mx-auto text-lg">
-            Every aspect of our design is intentional, creating an experience
-            that feels both intuitive and delightful—without unnecessary
-            complexity.
+          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
+            We deliver cutting-edge IT services that drive growth, efficiency,
+            and competitive advantage for businesses in the digital age.
           </p>
         </div>
 
@@ -213,3 +170,5 @@ export const Features = () => {
     </section>
   );
 };
+
+export default Features;

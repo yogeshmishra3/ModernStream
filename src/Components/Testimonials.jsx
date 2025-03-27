@@ -33,10 +33,10 @@ const TestimonialCard = ({ quote, author, role, company, delay = 0 }) => {
   return (
     <div
       ref={cardRef}
-      className="glass-card p-6 rounded-xl transition-all duration-700 ease-out opacity-0 translate-y-8"
+      className="glass-card bg-gray-800 border border-gray-700 p-6 rounded-xl transition-all duration-700 ease-out opacity-0 translate-y-8 hover:shadow-2xl hover:scale-105 transform transition"
     >
       <svg
-        className="w-8 h-8 text-blue-500 mb-4"
+        className="w-8 h-8 text-cyan-500 mb-4"
         fill="currentColor"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
@@ -44,13 +44,13 @@ const TestimonialCard = ({ quote, author, role, company, delay = 0 }) => {
         <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2V8zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2V8z" />
       </svg>
 
-      <p className="text-slate-700 mb-6">{quote}</p>
+      <p className="text-gray-300 mb-6 italic">{quote}</p>
 
       <div className="flex items-center">
-        <div className="w-10 h-10 bg-slate-200 rounded-full"></div>
+        <div className="w-10 h-10 bg-gray-700 rounded-full"></div>
         <div className="ml-3">
-          <h4 className="font-semibold text-slate-800">{author}</h4>
-          <p className="text-sm text-slate-500">
+          <h4 className="font-semibold text-white">{author}</h4>
+          <p className="text-sm text-gray-400">
             {role}, {company}
           </p>
         </div>
@@ -87,20 +87,20 @@ export const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="py-24 px-6 mt-7 md:px-12 relative overflow-hidden"
+      className="py-24 px-6   md:px-12 relative overflow-hidden bg-gray-900"
     >
       {/* Background decorations */}
-      <div className="absolute top-40 -left-40 w-80 h-80 bg-indigo-50 rounded-full opacity-70 blur-3xl"></div>
+      <div className="absolute top-40 -left-40 w-80 h-80 bg-cyan-900 rounded-full opacity-30 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="inline-block text-sm font-medium bg-blue-50 text-blue-600 rounded-full px-4 py-1.5 mb-4">
+          <h2 className="inline-block text-sm font-medium bg-gray-800 text-cyan-400 rounded-full px-4 py-1.5 mb-4">
             Testimonials
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
+          <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             What our clients say
           </h3>
-          <p className="text-slate-600 max-w-3xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
             We let our work speak for itself, but here's what others have to say
             about our approach to design and usability.
           </p>

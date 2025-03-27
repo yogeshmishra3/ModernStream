@@ -18,12 +18,12 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-white mt-7 min-h-screen flex items-center justify-center py-12">
+    <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-black   min-h-screen flex items-center justify-center py-12">
       {/* Animated Square Grid */}
       {squares.map((square) => (
         <div
           key={square.id}
-          className="absolute border border-blue-500 bg-transparent opacity-30"
+          className="absolute border border-cyan-500 bg-transparent opacity-20"
           style={{
             width: square.size,
             height: square.size,
@@ -38,18 +38,18 @@ const Hero = () => {
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-5xl font-extrabold text-black leading-tight mb-6">
+          <h1 className="text-5xl font-extrabold text-white leading-tight mb-6">
             Empowering Business with <br />
-            <span className="text-blue-600">Innovative Technology</span>
+            <span className="text-cyan-400">Innovative Technology</span>
           </h1>
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
             At ModernStream, we drive success through cutting-edge solutions,
             seamless integration, and unmatched performance. Let's elevate your
             business to new heights!
           </p>
           <div className="flex justify-center md:justify-start gap-4">
             <button
-              className="bg-blue-600 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105"
+              className="bg-cyan-600 text-white font-bold px-8 py-3 rounded-full shadow-xl hover:bg-cyan-500 transition-transform transform hover:scale-105"
               href="#Service"
             >
               Explore Our Work
@@ -64,12 +64,12 @@ const Hero = () => {
             <img
               src="../developer.jpg"
               alt="modernstream Hero"
-              className="w-full md:w-[400px] h-auto max-h-[500px] rounded-2xl shadow-xl opacity-90 object-cover"
+              className="w-full md:w-[400px] h-auto max-h-[500px] rounded-2xl shadow-2xl opacity-90 object-cover transform transition duration-300 hover:scale-105"
             />
 
             {/* Floating Tech Element */}
             <div className="absolute -top-6 left-10">
-              <div className="w-12 h-12 bg-blue-500 opacity-40 rotate-12 rounded-lg shadow-md animate-float"></div>
+              <div className="w-12 h-12 bg-cyan-500 opacity-40 rotate-12 rounded-lg shadow-md animate-float"></div>
             </div>
           </div>
         </div>
@@ -79,14 +79,18 @@ const Hero = () => {
       <style>
         {`
           @keyframes moveSquare {
-            0% { transform: translateY(0) rotate(45deg); opacity: 0.5; }
-            50% { transform: translateY(40px) rotate(45deg); opacity: 0.3; }
-            100% { transform: translateY(0) rotate(45deg); opacity: 0.5; }
+            0% { transform: translateY(0) rotate(45deg); opacity: 0.3; }
+            50% { transform: translateY(40px) rotate(45deg); opacity: 0.2; }
+            100% { transform: translateY(0) rotate(45deg); opacity: 0.3; }
           }
 
           @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
+          }
+
+          .animate-float {
+            animation: float 3s ease-in-out infinite;
           }
         `}
       </style>

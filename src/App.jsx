@@ -13,7 +13,7 @@ import Services from "./Components/Services";
 import Footer from "./Components/Footer";
 import RecentWorks from "./Components/Work";
 import ContactForm from "./Components/ContactForm";
-import { Features } from "./Components/Features";
+import  Features  from "./Components/Features";
 import { Testimonials } from "./Components/Testimonials";
 
 function MainContent() {

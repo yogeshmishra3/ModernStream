@@ -1,7 +1,4 @@
 import { useState } from "react";
-import imgCRM from "../assets/CRM.jpg";
-import imgWeb from "../assets/Website.jpg";
-import imgApp from "../assets/App.jpg";
 
 const categories = ["All", "Web", "App", "Web Design"];
 const works = [
@@ -11,7 +8,7 @@ const works = [
     title: "modernstream CRM",
     description:
       "A comprehensive customer relationship management system with advanced analytics and reporting features.",
-    image: imgCRM,
+    image: "/api/placeholder/400/300",
   },
   {
     id: 2,
@@ -19,7 +16,7 @@ const works = [
     title: "Static Transport Website",
     description:
       "Modern, responsive website design for a transportation company featuring animated elements and intuitive navigation.",
-    image: imgWeb,
+    image: "/api/placeholder/400/300",
   },
   {
     id: 3,
@@ -27,7 +24,7 @@ const works = [
     title: "Ascetic App",
     description:
       "Minimalist productivity mobile application with focus tracking and customizable workflow management.",
-    image: imgApp,
+    image: "/api/placeholder/400/300",
   },
 ];
 
@@ -40,19 +37,20 @@ export default function WorkPage() {
       : works.filter((work) => work.category === activeCategory);
 
   return (
-    <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 py-16">
+    <section className="bg-gradient-to-br from-gray-900 via-black to-gray-900 py-16">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Title and Subtitle */}
         <div className="text-center mb-12">
-          <p className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
+          <p className="text-cyan-400 font-semibold uppercase tracking-wider text-sm">
             Creative Portfolio
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
             Recent Works
           </h2>
-          <div className="h-1 w-24 bg-blue-500 mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Explore some of our latest creative projects.
+          <div className="h-1 w-24 bg-cyan-500 mx-auto mb-6 rounded-full"></div>
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+            Explore some of our latest creative projects that push the
+            boundaries of design and functionality.
           </p>
         </div>
 
@@ -62,10 +60,10 @@ export default function WorkPage() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-5 py-2 rounded-full font-medium transition duration-300 ${
+              className={`px-5 py-2 rounded-full font-medium transition duration-300 transform hover:scale-105 ${
                 activeCategory === category
-                  ? "bg-blue-600 text-white shadow-md"
-                  : "bg-white text-gray-700 border border-gray-200 hover:border-blue-300 hover:text-blue-600"
+                  ? "bg-cyan-600 text-white shadow-lg"
+                  : "bg-gray-800 text-gray-300 border border-gray-700 hover:bg-gray-700"
               }`}
             >
               {category}
@@ -78,24 +76,25 @@ export default function WorkPage() {
           {filteredWorks.map((work) => (
             <div
               key={work.id}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group"
+              className="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group border border-gray-700"
             >
-              <div className="overflow-hidden">
+              <div className="relative overflow-hidden">
                 <img
                   src={work.image}
                   alt={work.title}
-                  className="w-full h-50 object-cover transition duration-500 group-hover:scale-110"
+                  className="w-full h-50 object-cover transition duration-500 group-hover:scale-110 brightness-75 group-hover:brightness-100"
                 />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
               </div>
               <div className="p-6">
-                <span className="text-sm text-blue-600 font-medium bg-blue-50 px-3 py-1 rounded-full">
+                <span className="text-sm text-cyan-400 font-medium bg-gray-900 px-3 py-1 rounded-full">
                   {work.category}
                 </span>
-                <h3 className="text-xl font-bold text-gray-800 mt-3 mb-2">
+                <h3 className="text-xl font-bold text-white mt-3 mb-2">
                   {work.title}
                 </h3>
-                <p className="text-gray-600 mb-4 text-sm">{work.description}</p>
-                <button className="text-blue-600 font-medium inline-flex items-center group-hover:text-blue-800">
+                <p className="text-gray-400 mb-4 text-sm">{work.description}</p>
+                <button className="text-cyan-400 font-medium inline-flex items-center group-hover:text-cyan-300 transition-all duration-300 hover:underline">
                   View Details
                   <svg
                     className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300"

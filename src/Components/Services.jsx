@@ -28,11 +28,11 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-gradient-to-br from-[#0b0f19] mt-7 via-[#151a29] to-[#1a1f2e] text-white py-24">
+    <section className="bg-gradient-to-br from-[#0b0f19]   via-[#151a29] to-[#1a1f2e] text-white py-24">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="inline-block text-lg font-semibold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-3 tracking-wider">
+          <h2 className="inline-block text-lg font-semibold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-3 tracking-wider">
             WHAT WE DO
           </h2>
           <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
@@ -45,7 +45,7 @@ const Services = () => {
           <div className="h-px w-1/4 bg-gradient-to-r from-transparent to-blue-500/30"></div>
           <a
             href="/services"
-            className="px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium transition-all hover:shadow-lg hover:shadow-blue-500/20 hover:scale-105"
+            className="px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-purple-400 text-white font-medium transition-all hover:shadow-lg hover:shadow-blue-500/20 hover:scale-105"
           >
             EXPLORE SERVICES →
           </a>
