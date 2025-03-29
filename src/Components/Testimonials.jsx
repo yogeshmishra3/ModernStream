@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useRef, useEffect } from "react";
 
 const TestimonialCard = ({ quote, author, role, company, delay = 0 }) => {
@@ -87,7 +88,7 @@ export const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="py-24 px-6   md:px-12 relative overflow-hidden bg-gray-900"
+      className="py-24 px-6 md:px-12 relative overflow-hidden bg-gray-900"
     >
       {/* Background decorations */}
       <div className="absolute top-40 -left-40 w-80 h-80 bg-cyan-900 rounded-full opacity-30 blur-3xl"></div>
@@ -122,3 +123,37 @@ export const Testimonials = () => {
     </section>
   );
 };
+
+export default function PodcastLanding() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-10">
+      <motion.h1
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-5xl font-bold text-center"
+      >
+        Welcome to the Podcast
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="text-lg mt-4 text-gray-400"
+      >
+        Listen to the latest episodes and explore insightful conversations.
+      </motion.p>
+
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="mt-6 px-6 py-3 bg-blue-600 rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-700"
+      >
+        Explore Episodes
+      </motion.button>
+
+      <Testimonials />
+    </div>
+  );
+}
