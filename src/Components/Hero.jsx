@@ -19,7 +19,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br mt-15 from-gray-900 to-black min-h-screen flex items-center justify-center py-12">
+    <section className="relative overflow-hidden bg-gradient-to-br  from-gray-900 to-black min-h-screen flex items-center justify-center py-12">
       {/* Animated Square Grid */}
       {squares.map((square) => (
         <motion.div

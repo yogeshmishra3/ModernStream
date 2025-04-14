@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
 
         {/* Social Links */}
-        <div>
+        {/* <div>
           <h3 className="text-xl font-semibold mb-3 text-white">Follow Us</h3>
           <div className="flex space-x-4">
             <a
@@ -87,7 +87,7 @@ export default function Footer() {
               <FaInstagram size={18} />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Copyright */}

@@ -13,7 +13,7 @@ import Services from "./Components/Services";
 import Footer from "./Components/Footer";
 import RecentWorks from "./Components/Work";
 import ContactForm from "./Components/ContactForm";
-import  Features  from "./Components/Features";
+import Features from "./Components/Features";
 import { Testimonials } from "./Components/Testimonials";
 
 function MainContent() {
@@ -34,10 +34,10 @@ function MainContent() {
         <>
           <Hero />
           <About />
-          <Features />
+          <Services />
+
           <RecentWorks />
           <Testimonials />
-          <Services />
           <ContactForm />
         </>
       ) : (
@@ -57,7 +57,11 @@ function App() {
   return (
     <Router>
       <Header />
-      <MainContent />
+      <div className="mt-15">
+        {" "}
+        {/* Spacer for fixed header */}
+        <MainContent />
+      </div>
       <Footer />
     </Router>
   );

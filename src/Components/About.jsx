@@ -55,46 +55,36 @@ const About = () => {
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 1 }}
         >
-          <h3 className="text-3xl font-bold text-white">Connect With Us</h3>
-          <p className="mt-4 text-lg text-gray-300 leading-relaxed">
-            Follow us on social media to stay updated with our latest projects.
+          <h3 className="text-2xl sm:text-3xl font-bold text-white">
+            Connect With Us
+          </h3>
+
+          <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
+            We're always open to discussing new projects and opportunities.
+            Reach out to us directly to start a conversation.
           </p>
-          <div className="flex space-x-6 mt-8">
-            {[
-              {
-                icon: faFacebookF,
-                color: "text-cyan-400",
-                hover: "hover:bg-cyan-900",
-              },
-              {
-                icon: faTwitter,
-                color: "text-cyan-400",
-                hover: "hover:bg-cyan-900",
-              },
-              {
-                icon: faYoutube,
-                color: "text-red-400",
-                hover: "hover:bg-red-900",
-              },
-              {
-                icon: faLinkedinIn,
-                color: "text-cyan-400",
-                hover: "hover:bg-cyan-900",
-              },
-            ].map((social, index) => (
-              <motion.a
-                key={index}
-                href="#"
-                className={`w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center ${social.hover} transition duration-300 shadow-md hover:shadow-2xl`}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
+          <div className="mt-6 sm:mt-8">
+            <motion.a
+              href="/contact"
+              className="inline-flex items-center px-5 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 text-white font-medium transition duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact Us
+              <svg
+                className="w-5 h-5 ml-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <FontAwesomeIcon
-                  icon={social.icon}
-                  className={`${social.color} text-xl`}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
                 />
-              </motion.a>
-            ))}
+              </svg>
+            </motion.a>
           </div>
         </motion.div>
       </div>
