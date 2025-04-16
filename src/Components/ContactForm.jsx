@@ -50,7 +50,7 @@ export default function ContactForm() {
               {/* Contact Details with Icons */}
               <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
                 <Mail className="h-6 w-6 text-white" />
-                <span>modernstream@gmail.com</span>
+                <span>modernstreamweb@gmail.com</span>
               </div>
 
               <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
